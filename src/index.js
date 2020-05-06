@@ -26,4 +26,10 @@ let withValueFromSecond = (first, second) => destination => {
   })
 }
 
-withValueFromSecond(buttonClick, nameInput)(logValue)
+let getTargetValue = source => destination => {
+  source(value => {
+    destination(value.target.value)
+  })
+}
+
+withValueFromSecond(buttonClick, getTargetValue(nameInput))(logValue)

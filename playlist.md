@@ -39,3 +39,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
 
+
+## Get Target Value 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/get-target-value](https://github.com/johnlindquist/compose-callback-workshop/tree/get-target-value) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js) 
+
