@@ -1,7 +1,7 @@
 import "./styles.css";
 
-document.getElementById("app").innerHTML = `
-  <button>Click Me</button>
-</div>
-`;
+let button = document.getElementById("button")
 
+button.addEventListener("click", () => {
+  console.log("hello world")
+})
