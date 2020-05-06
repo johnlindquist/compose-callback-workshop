@@ -2,6 +2,11 @@ import "./styles.css";
 
 let button = document.getElementById("button")
 let name = document.getElementById("name")
+let form = document.getElementById("form")
+form.addEventListener("submit", event => {
+  event.preventDefault()
+})
+
 
 let buttonClick = destination => {
   button.addEventListener("click", destination)
@@ -32,4 +37,12 @@ let getTargetValue = source => destination => {
   })
 }
 
-withValueFromSecond(buttonClick, getTargetValue(nameInput))(logValue)
+let nameInputTargetValue = getTargetValue(nameInput)
+
+let clearInput = () => {
+  name.value = ""
+}
+
+let getNameAfterButtonClick = withValueFromSecond(buttonClick, nameInputTargetValue)
+getNameAfterButtonClick(logValue)
+getNameAfterButtonClick(clearInput)

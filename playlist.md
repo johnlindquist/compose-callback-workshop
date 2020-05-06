@@ -46,3 +46,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js) 
 
+
+## Two Destinations 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/two-destinations](https://github.com/johnlindquist/compose-callback-workshop/tree/two-destinations) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/two-destinations/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/two-destinations/?module=/src/index.js) 
+
