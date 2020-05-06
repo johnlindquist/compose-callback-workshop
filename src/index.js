@@ -6,15 +6,15 @@ let buttonClick = destination => {
   button.addEventListener("click", destination)
 }
 
-let callback = () => {
-  console.log("hello world")
+let logValue = value => {
+  console.log(value)
 }
 
-let twice = source => destination => {
-  source(() => {
-    destination()
-    destination()
+let pageXAndY = source => destination => {
+  source(event => {
+    destination(event.pageX)
+    destination(event.pageY)
   })
 }
 
-twice(buttonClick)(callback)
+pageXAndY(buttonClick)(logValue)
