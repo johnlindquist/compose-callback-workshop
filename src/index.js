@@ -10,4 +10,11 @@ let callback = () => {
   console.log("hello world")
 }
 
-buttonClick(callback)
+let twice = source => destination => {
+  source(() => {
+    destination()
+    destination()
+  })
+}
+
+twice(buttonClick)(callback)
