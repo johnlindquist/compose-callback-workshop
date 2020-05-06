@@ -1,23 +1,29 @@
 import "./styles.css";
 
-let one = document.getElementById("one")
-let two = document.getElementById("two")
+let button = document.getElementById("button")
+let name = document.getElementById("name")
 
-let oneClick = destination => {
-  one.addEventListener("click", destination)
+let buttonClick = destination => {
+  button.addEventListener("click", destination)
 }
 
-let twoClick = destination => {
-  two.addEventListener("click", destination)
+let nameInput = destination => {
+  name.addEventListener("input", destination)
 }
 
 let logValue = value => {
   console.log(value)
 }
 
-let both = (source1, source2) => destination => {
-  source1(destination)
-  source2(destination)
+let withValueFromSecond = (first, second) => destination => {
+  let secondValue = null
+  second(value => {
+    secondValue = value
+  })
+
+  first(ignore => {
+    destination(secondValue)
+  })
 }
 
-both(oneClick, twoClick)(logValue)
+withValueFromSecond(buttonClick, nameInput)(logValue)

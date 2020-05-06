@@ -32,3 +32,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/two-sources/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/two-sources/?module=/src/index.js) 
 
+
+## With Value From Second 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/with-value-from-second](https://github.com/johnlindquist/compose-callback-workshop/tree/with-value-from-second) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
+
