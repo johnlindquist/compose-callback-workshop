@@ -9,6 +9,7 @@ form.addEventListener("submit", event => {
 
 
 let buttonClick = destination => {
+  console.log("setup")
   button.addEventListener("click", destination)
 }
 
@@ -37,12 +38,28 @@ let getTargetValue = source => destination => {
   })
 }
 
-let nameInputTargetValue = getTargetValue(nameInput)
 
 let clearInput = () => {
   name.value = ""
 }
 
-let getNameAfterButtonClick = withValueFromSecond(buttonClick, nameInputTargetValue)
+let share = () => {
+  let destinations = []
+
+  return source => destination => {
+    destinations.push(destination)
+    if (destinations.length > 1) return
+    source(value => {
+      destinations.forEach(fn => fn(value))
+    })
+  }
+}
+
+let sharedNameInput = share()(nameInput)
+let nameInputTargetValue = getTargetValue(sharedNameInput)
+
+let sharedButton = share()(buttonClick)
+
+let getNameAfterButtonClick = withValueFromSecond(sharedButton, nameInputTargetValue)
 getNameAfterButtonClick(logValue)
 getNameAfterButtonClick(clearInput)
