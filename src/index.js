@@ -1,20 +1,23 @@
 import "./styles.css";
 
-let button = document.getElementById("button")
+let one = document.getElementById("one")
+let two = document.getElementById("two")
 
-let buttonClick = destination => {
-  button.addEventListener("click", destination)
+let oneClick = destination => {
+  one.addEventListener("click", destination)
+}
+
+let twoClick = destination => {
+  two.addEventListener("click", destination)
 }
 
 let logValue = value => {
   console.log(value)
 }
 
-let pageXAndY = source => destination => {
-  source(event => {
-    destination(event.pageX)
-    destination(event.pageY)
-  })
+let both = (source1, source2) => destination => {
+  source1(destination)
+  source2(destination)
 }
 
-pageXAndY(buttonClick)(logValue)
+both(oneClick, twoClick)(logValue)
