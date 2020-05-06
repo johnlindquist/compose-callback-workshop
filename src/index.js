@@ -2,6 +2,12 @@ import "./styles.css";
 
 let button = document.getElementById("button")
 
-button.addEventListener("click", () => {
+let buttonClick = destination => {
+  button.addEventListener("click", destination)
+}
+
+let callback = () => {
   console.log("hello world")
-})
+}
+
+buttonClick(callback)
