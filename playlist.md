@@ -60,3 +60,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js) 
 
+
+## Typeahead First Pass 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass](https://github.com/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass/?module=/src/index.js) 
+
