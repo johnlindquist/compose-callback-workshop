@@ -1,121 +1,42 @@
 import "./styles.css";
 
 let button = document.getElementById("button")
-let name = document.getElementById("name")
-let form = document.getElementById("form")
-let mirror = document.getElementById("mirror")
-let list = document.getElementById("list")
-const URL = `https://foamy-closet.glitch.me`;
+let input = document.getElementById("input")
 
-form.addEventListener("submit", event => {
-  event.preventDefault()
-})
-
-
-let buttonClick = destination => {
-  console.log("setup")
-  button.addEventListener("click", destination)
+let buttonClick = listener => {
+  button.addEventListener("click", listener)
 }
 
-let nameInput = destination => {
-  name.addEventListener("input", destination)
+let inputInput = listener => {
+  input.addEventListener("input", listener)
 }
 
-
-let search = term => async destination => {
-  destination(await fetch(`${URL}/people?name_like=${term}`))
+let interval = listener => {
+  setInterval(listener, 1000)
 }
 
-let logValue = value => {
-  console.log(value)
+let timeout = listener => {
+  setTimeout(listener, 1000)
 }
 
-let withValueFromSecond = (first, second) => destination => {
-  let secondValue = null
-  second(value => {
-    secondValue = value
+let promise = async listener => {
+  let result = await new Promise(resolve => {
+    setTimeout(() => {
+      resolve("This was a promise")
+    }, 1000)
   })
 
-  first(ignore => {
-    destination(secondValue)
-  })
+  listener(result)
 }
 
-let getTargetValue = source => destination => {
-  source(value => {
-    destination(value.target.value)
-  })
+let someValue = listener => {
+  setTimeout(() => {
+    listener({ name: "John" })
+  }, 0)
 }
 
-
-let clearInput = () => {
-  name.value = ""
+let someIterable = listener => {
+  setTimeout(() => {
+    [1, 2, 3].forEach(listener)
+  }, 0)
 }
-
-let mirrorText = text => {
-  mirror.innerText = text
-}
-
-let share = () => {
-  let destinations = []
-
-  return source => destination => {
-    destinations.push(destination)
-    if (destinations.length > 1) return
-    source(value => {
-      destinations.forEach(fn => fn(value))
-    })
-  }
-}
-
-let switchTo = switcher => source => destination => {
-  source(value => {
-    switcher(value)(destination)
-  })
-}
-
-let map = xf => source => destination => {
-  source(value => {
-    let mapped = xf(value)
-    destination(mapped)
-  })
-}
-
-let filter = pred => source => destination => {
-  source(value => {
-    if (pred(value)) {
-      destination(value)
-    }
-  })
-}
-
-let mapAsync = xf => source => destination => {
-  source(value => {
-    let mapped = xf(value)
-    mapped.then(destination)
-  })
-}
-
-
-let sharedNameInput = share()(nameInput)
-let nameInputTargetValue = getTargetValue(sharedNameInput)
-
-nameInputTargetValue(mirrorText)
-
-let getJSON = mapAsync(async response => await response.json())
-let longEnough = filter(text => text.length > 2)
-
-let listResults = value => {
-  list.innerHTML = value.map(item => `<div>${item.name}</div>`).join("")
-}
-
-let longEnoughName = longEnough(nameInputTargetValue)
-
-getJSON(switchTo(name => search(name))(longEnoughName))(listResults)
-
-let sharedButton = share()(buttonClick)
-
-let getNameAfterButtonClick = withValueFromSecond(sharedButton, nameInputTargetValue)
-getNameAfterButtonClick(logValue)
-getNameAfterButtonClick(clearInput)
-
