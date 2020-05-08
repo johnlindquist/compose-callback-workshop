@@ -116,3 +116,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/start-an-interval/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/start-an-interval/?module=/src/index.js) 
 
+
+## Pause Interval 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/pause-interval](https://github.com/johnlindquist/compose-callback-workshop/tree/pause-interval) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/pause-interval/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/pause-interval/?module=/src/index.js) 
+
