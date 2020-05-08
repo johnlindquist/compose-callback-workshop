@@ -1,42 +1,25 @@
-import "./styles.css";
-
-let button = document.getElementById("button")
-let input = document.getElementById("input")
-
-let buttonClick = listener => {
-  button.addEventListener("click", listener)
+let log = value => {
+  console.log(value)
 }
 
-let inputInput = listener => {
-  input.addEventListener("input", listener)
+// log("hello")
+
+let alert = value => {
+  window.alert(value)
 }
 
-let interval = listener => {
-  setInterval(listener, 1000)
+//alert("hi")
+
+let output = document.getElementById("output")
+let showOutput = value => {
+  output.innerHTML = `<div>${value}</div>`
 }
 
-let timeout = listener => {
-  setTimeout(listener, 1000)
+// showOutput("John")
+
+let list = document.getElementById("list")
+let showList = value => {
+  list.innerHTML = value.map(item => `<div>${item}</div>`).join("")
 }
 
-let promise = async listener => {
-  let result = await new Promise(resolve => {
-    setTimeout(() => {
-      resolve("This was a promise")
-    }, 1000)
-  })
-
-  listener(result)
-}
-
-let someValue = listener => {
-  setTimeout(() => {
-    listener({ name: "John" })
-  }, 0)
-}
-
-let someIterable = listener => {
-  setTimeout(() => {
-    [1, 2, 3].forEach(listener)
-  }, 0)
-}
+//showList([1, 2, 3])
