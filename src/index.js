@@ -2,24 +2,39 @@ let log = value => {
   console.log(value)
 }
 
-// log("hello")
+let plus = document.getElementById("plus")
+let minus = document.getElementById("minus")
 
-let alert = value => {
-  window.alert(value)
+let plusClick = listener => {
+  plus.addEventListener("click", listener)
 }
 
-//alert("hi")
-
-let output = document.getElementById("output")
-let showOutput = value => {
-  output.innerHTML = `<div>${value}</div>`
+let minusClick = listener => {
+  minus.addEventListener("click", listener)
 }
 
-// showOutput("John")
-
-let list = document.getElementById("list")
-let showList = value => {
-  list.innerHTML = value.map(item => `<div>${item}</div>`).join("")
+let mapTo = value => broadcaster => listener => {
+  broadcaster(ignoreMe => {
+    listener(value)
+  })
 }
 
-//showList([1, 2, 3])
+let both = (first, second) => listener => {
+  first(listener)
+  second(listener)
+}
+
+let add = initial => {
+  let current = initial
+  return broadcaster => listener => {
+    broadcaster(value => {
+      current += value
+      listener(current)
+    })
+  }
+}
+
+let plusOne = mapTo(1)(plusClick)
+let minusOne = mapTo(-1)(minusClick)
+
+add(0)(both(plusOne, minusOne))(log)
