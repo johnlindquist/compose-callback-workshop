@@ -88,3 +88,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/add/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/add/?module=/src/index.js) 
 
+
+## Update with Function 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/update-with-function](https://github.com/johnlindquist/compose-callback-workshop/tree/update-with-function) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/update-with-function/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/update-with-function/?module=/src/index.js) 
+

@@ -24,17 +24,17 @@ let both = (first, second) => listener => {
   second(listener)
 }
 
-let add = initial => {
+let updateWithFn = initial => {
   let current = initial
   return broadcaster => listener => {
-    broadcaster(value => {
-      current += value
+    broadcaster(fn => {
+      current = fn(current)
       listener(current)
     })
   }
 }
 
-let plusOne = mapTo(1)(plusClick)
-let minusOne = mapTo(-1)(minusClick)
+let plusOne = mapTo(value => value + 1)(plusClick)
+let minusOne = mapTo(value => value - 1)(minusClick)
 
-add(0)(both(plusOne, minusOne))(log)
+updateWithFn(0)(both(plusOne, minusOne))(log)
