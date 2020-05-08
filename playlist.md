@@ -95,3 +95,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/update-with-function/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/update-with-function/?module=/src/index.js) 
 
+
+## Scan 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/scan](https://github.com/johnlindquist/compose-callback-workshop/tree/scan) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js) 
+

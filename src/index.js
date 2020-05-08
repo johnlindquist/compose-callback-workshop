@@ -24,11 +24,11 @@ let both = (first, second) => listener => {
   second(listener)
 }
 
-let updateWithFn = initial => {
+let scan = (accumulator, initial) => {
   let current = initial
   return broadcaster => listener => {
-    broadcaster(fn => {
-      current = fn(current)
+    broadcaster(value => {
+      current = accumulator(current, value)
       listener(current)
     })
   }
@@ -37,4 +37,4 @@ let updateWithFn = initial => {
 let plusOne = mapTo(value => value + 1)(plusClick)
 let minusOne = mapTo(value => value - 1)(minusClick)
 
-updateWithFn(0)(both(plusOne, minusOne))(log)
+scan((acc, value) => value(acc), 0)(both(plusOne, minusOne))(log)
