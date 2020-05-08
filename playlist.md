@@ -109,3 +109,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/interval-with-inc/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/interval-with-inc/?module=/src/index.js) 
 
+
+## Start an Interval 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/start-an-interval](https://github.com/johnlindquist/compose-callback-workshop/tree/start-an-interval) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/start-an-interval/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/start-an-interval/?module=/src/index.js) 
+
