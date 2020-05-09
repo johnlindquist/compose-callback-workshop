@@ -1,9 +1,18 @@
-import "./styles.css";
+import "./styles.css"
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use Parcel to bundle this sandbox, you can find more info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+import { compose } from "./utils"
+import { createEventBroadcaster, createInterval } from "./broadcasters"
+import { stopWhen, mapTo } from "./operators"
+import { log } from "./listeners"
+
+let stopButton = document.getElementById("stop")
+let stopClick = createEventBroadcaster(stopButton, "click")
+
+let interval = createInterval(1000)
+
+let operations = compose(
+    stopWhen(stopClick),
+    mapTo("hi")
+)
+
+operations(interval)(log)
