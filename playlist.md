@@ -123,3 +123,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/pause-interval/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/pause-interval/?module=/src/index.js) 
 
+
+## Coupled Broadcasters and Listeners 
+
+[https://github.com/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners](https://github.com/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners) 
+
+[https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners/?module=/src/index.js) 
+
