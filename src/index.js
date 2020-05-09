@@ -2,19 +2,19 @@ import "./styles.css";
 
 let button = document.getElementById("button")
 
-let buttonClick = destination => {
-  button.addEventListener("click", destination)
+let buttonClick = listener => {
+    button.addEventListener("click", listener)
 }
 
 let callback = () => {
-  console.log("hello world")
+    console.log("hello world")
 }
 
-let twice = source => destination => {
-  source(() => {
-    destination()
-    destination()
-  })
+let twice = source => listener => {
+    source(() => {
+        listener()
+        listener()
+    })
 }
 
 twice(buttonClick)(callback)
