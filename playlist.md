@@ -5,3 +5,10 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/stop/?module=/src/index.js) 
 
+
+### Take Only 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/take-only) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/take-only/?module=/src/index.js) 
+

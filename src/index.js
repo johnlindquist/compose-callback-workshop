@@ -1,18 +1,23 @@
 import "./styles.css"
 
-import { compose } from "./utils"
-import { createEventBroadcaster, createInterval } from "./broadcasters"
-import { stopWhen, mapTo } from "./operators"
+import { createEventBroadcaster } from "./broadcasters"
 import { log } from "./listeners"
 
-let stopButton = document.getElementById("stop")
-let stopClick = createEventBroadcaster(stopButton, "click")
+let button = document.getElementById("button")
+let buttonClick = createEventBroadcaster(button, "click")
 
-let interval = createInterval(1000)
+let takeOnly = howMany => broadcaster => listener => {
+    let count = 0
+    let stop = broadcaster(value => {
+        listener(value)
+        count++
+        if (count == howMany) {
+            stop()
+        }
+    })
 
-let operations = compose(
-    stopWhen(stopClick),
-    mapTo("hi")
-)
 
-operations(interval)(log)
+    return stop
+}
+
+takeOnly(2)(buttonClick)(log)
