@@ -44,11 +44,11 @@
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/twice/?module=/src/index.js) 
 
 
-### Two Sources 
+## Two Broadcasters 
 
-[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/two-sources) 
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/two-broadcasters) 
 
-[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/two-sources/?module=/src/index.js) 
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/two-broadcasters/?module=/src/index.js) 
 
 
 ### With Value From Second 
