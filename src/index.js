@@ -3,27 +3,27 @@ import "./styles.css";
 let button = document.getElementById("button")
 let name = document.getElementById("name")
 
-let buttonClick = destination => {
-  button.addEventListener("click", destination)
+let buttonClick = listener => {
+    button.addEventListener("click", listener)
 }
 
-let nameInput = destination => {
-  name.addEventListener("input", destination)
+let nameInput = listener => {
+    name.addEventListener("input", listener)
 }
 
 let logValue = value => {
-  console.log(value)
+    console.log(value)
 }
 
-let withValueFromSecond = (first, second) => destination => {
-  let secondValue = null
-  second(value => {
-    secondValue = value
-  })
+let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
+    let secondValue = null
+    secondBroadcaster(value => {
+        secondValue = value
+    })
 
-  first(ignore => {
-    destination(secondValue)
-  })
+    firstBroadcaster(ignore => {
+        listener(secondValue)
+    })
 }
 
 withValueFromSecond(buttonClick, nameInput)(logValue)
