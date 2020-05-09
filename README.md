@@ -101,7 +101,13 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/compose/?module=/src/index.js) 
 
-### Stop 
+### Take Only 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/take-only) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/take-only/?module=/src/index.js) 
+
+### Stop When
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/stop) 
 
