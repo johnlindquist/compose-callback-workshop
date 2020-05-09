@@ -2,14 +2,18 @@ import "./styles.css";
 
 let button = document.getElementById("button")
 let name = document.getElementById("name")
+let form = document.getElementById("form")
 
-let buttonClick = listener => {
-    button.addEventListener("click", listener)
+form.addEventListener("submit", event => {
+    event.preventDefault()
+})
+
+let createEventBroadcaster = (element, event) => listener => {
+    element.addEventListener(event, listener)
 }
 
-let nameInput = listener => {
-    name.addEventListener("input", listener)
-}
+let buttonClick = createEventBroadcaster(button, "click")
+let nameInput = createEventBroadcaster(name, "input")
 
 let logValue = value => {
     console.log(value)
@@ -26,4 +30,11 @@ let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
     })
 }
 
-withValueFromSecond(buttonClick, nameInput)(logValue)
+let map = transform => broadcaster => listener => {
+    broadcaster(value => {
+        listener(transform(value))
+    })
+}
+let targetValue = map(event => event.target.value)
+
+targetValue(withValueFromSecond(buttonClick, nameInput))(logValue)
