@@ -1,10 +1,9 @@
 let button = document.getElementById("button")
+let input = document.getElementById("input")
 
 button.addEventListener("click", event => {
     console.log("clicked the button")
 })
-
-let input = document.getElementById("input")
 
 input.addEventListener("input", event => {
     console.log(event.target.value)
