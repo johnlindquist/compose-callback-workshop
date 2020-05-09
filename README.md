@@ -1,6 +1,6 @@
 # Composing Callbacks Workshop
 
-## 1st Hour
+## 1st Hour - Decoupling Broadcasters and Listeners 📻
 
 ### Coupled Broadcasters and Listeners 
 
@@ -44,7 +44,7 @@
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/twice/?module=/src/index.js) 
 
 
-## Two Broadcasters 
+### Two Broadcasters 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/two-broadcasters) 
 
@@ -72,7 +72,14 @@
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/page-x-and-y/?module=/src/index.js) 
 
 
-## 2nd Hour
+## 2nd Hour - Enhancing Broadcasters 👨‍🍳
+
+### Configure Broadcasters 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/configure-broadcasters) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/configure-broadcasters/?module=/src/index.js) 
+
 
 ### Two Destinations 
 
@@ -88,19 +95,19 @@
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js) 
 
 
-## Compose 
+### Compose 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/compose) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/compose/?module=/src/index.js) 
 
-## Stop 
+### Stop 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/stop) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/stop/?module=/src/index.js) 
 
-## 3rd Hour
+## 3rd Hour - Operators with State 📈
 
 ### Add 
 
@@ -130,7 +137,7 @@
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/interval-with-inc/?module=/src/index.js) 
 
 
-## 4th Hour
+## 4th Hour - Building Real Demos 🖥
 
 ### Start an Interval 
 
