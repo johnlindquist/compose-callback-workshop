@@ -1,13 +1,13 @@
 export let mapTo = value => broadcaster => listener => {
-    return broadcaster(ignore => {
+    broadcaster(ignore => {
         listener(value)
     })
 }
 
-export let stopWhen = stopBroadcaster => broadcaster => listener => {
-    let stop = broadcaster(listener)
-
-    stopBroadcaster(stop)
-
-    return stop
+export let delay = time => broadcaster => listener => {
+    broadcaster(value => {
+        setTimeout(() => {
+            listener(value)
+        }, time)
+    })
 }
