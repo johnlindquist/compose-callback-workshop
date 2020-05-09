@@ -94,6 +94,12 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/compose/?module=/src/index.js) 
 
+## Stop 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/stop) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/stop/?module=/src/index.js) 
+
 ## 3rd Hour
 
 ### Add 
@@ -144,6 +150,4 @@
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass) 
 
-[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass/?module=/src/index.js) 
-
-
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass/?module=/src/index.js)
