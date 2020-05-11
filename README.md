@@ -97,7 +97,7 @@ and reusability in complex asynchronous scenarios.
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/configure-broadcasters/?module=/src/index.js) 
 
 
-### Two Destinations 
+### Two Listeners 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/two-destinations) 
 
@@ -128,6 +128,13 @@ and reusability in complex asynchronous scenarios.
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/stop) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/stop/?module=/src/index.js) 
+
+
+### Concat 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/concat) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/concat/?module=/src/index.js) 
 
 ## 3rd Hour - Operators with State 📈
 
