@@ -46,3 +46,10 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/pair/?module=/src/index.js) 
 
+
+### Concat 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/concat) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/concat/?module=/src/index.js) 
+

@@ -1,46 +1,45 @@
 import "./styles.css";
 
-let button = document.getElementById("button")
+let done = Symbol("done")
 
-let buttonClick = listener => {
-    button.addEventListener("click", listener)
-}
-
-let names = listener => {
+let oneSecond = listener => {
     setTimeout(() => {
-        ["John", "Sarah", "Ben"].forEach(listener)
-    }, 0)
+        listener(done)
+    }, 1000)
 }
 
 let logValue = value => {
     console.log(value)
 }
 
-let pair = (broadcaster1, broadcaster2) => listener => {
-    let broadcaster1Values = []
-    let broadcaster2Values = []
+let concat = (...broadcasters) => listener => {
+    let i = 0
 
-    broadcaster1(value => {
-        broadcaster1Values.push(value)
+    let setup = broadcaster => {
+        broadcaster(value => {
+            if (value === done) {
+                ++i < broadcasters.length
+                    ? setup(broadcasters[i])
+                    : listener(done)
 
-        if (broadcaster2Values.length) {
-            listener([
-                broadcaster1Values.shift(),
-                broadcaster2Values.shift()
-            ])
-        }
-    })
+            }
+            if (value !== done) listener(value)
+        })
+    }
 
-    broadcaster2(value => {
-        broadcaster2Values.push(value)
+    setup(broadcasters[i])
+}
 
-        if (broadcaster1Values.length) {
-            listener([
-                broadcaster1Values.shift(),
-                broadcaster2Values.shift()
-            ])
-        }
+let mapTo = mappedValue => broadcaster => listener => {
+    broadcaster(value => {
+        listener(mappedValue)
+        if (value === done) listener(done)
     })
 }
 
-pair(buttonClick, names)(logValue)
+let ready = mapTo("ready")(oneSecond)
+let set = mapTo("set")(oneSecond)
+let go = mapTo("go!")(oneSecond)
+
+
+concat(ready, set, go)(logValue)
