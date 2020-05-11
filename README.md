@@ -81,13 +81,6 @@ and reusability in complex asynchronous scenarios.
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js) 
 
 
-### Page X and Y 
-
-[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/page-x-and-y) 
-
-[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/page-x-and-y/?module=/src/index.js) 
-
-
 ## 2nd Hour - Enhancing Broadcasters 👨‍🍳
 
 ### Configure Broadcasters 
