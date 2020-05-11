@@ -1,29 +1,51 @@
 import "./styles.css";
 
-let button = document.getElementById("button")
-let name = document.getElementById("name")
+let first = document.getElementById("first")
+let last = document.getElementById("last")
+let output = document.getElementById("output")
 
-let buttonClick = listener => {
-    button.addEventListener("click", listener)
+let firstInput = listener => {
+    first.addEventListener("input", listener)
 }
 
-let nameInput = listener => {
-    name.addEventListener("input", listener)
+let lastInput = listener => {
+    last.addEventListener("input", listener)
 }
 
-let logValue = value => {
-    console.log(value)
+let writeToOutput = value => {
+    output.innerHTML = value
 }
 
-let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
-    let secondValue = null
+let together = (firstBroadcaster, secondBroadcaster) => listener => {
+    let firstValue = ""
+    let secondValue = ""
+
+    firstBroadcaster(value => {
+        firstValue = value
+        listener([firstValue, secondValue])
+    })
+
     secondBroadcaster(value => {
         secondValue = value
-    })
-
-    firstBroadcaster(ignore => {
-        listener(secondValue)
+        listener([firstValue, secondValue])
     })
 }
 
-withValueFromSecond(buttonClick, nameInput)(logValue)
+let getTargetValue = broadcaster => listener => {
+    broadcaster(event => {
+        listener(event.target.value)
+    })
+}
+
+let join = broadcaster => listener => {
+    broadcaster(array => {
+        listener(array.join(" "))
+    })
+}
+
+
+join(together(
+    getTargetValue(firstInput),
+    getTargetValue(lastInput)
+))
+    (writeToOutput)
