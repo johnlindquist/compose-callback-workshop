@@ -189,3 +189,11 @@ and reusability in complex asynchronous scenarios.
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass/?module=/src/index.js)
+
+## Exercises
+
+### Konami Code
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-konami) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-konami/?module=/src/index.js) 
