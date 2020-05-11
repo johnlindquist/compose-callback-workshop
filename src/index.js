@@ -1,18 +1,19 @@
 import "./styles.css";
 
 let button = document.getElementById("button")
-let name = document.getElementById("name")
+let text = document.getElementById("text")
+let output = document.getElementById("output")
 
 let buttonClick = listener => {
     button.addEventListener("click", listener)
 }
 
-let nameInput = listener => {
-    name.addEventListener("input", listener)
+let textInput = listener => {
+    text.addEventListener("input", listener)
 }
 
-let logValue = value => {
-    console.log(value)
+let storageUpdated = listener => {
+    window.addEventListener("storage", listener)
 }
 
 let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
@@ -26,4 +27,17 @@ let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
     })
 }
 
-withValueFromSecond(buttonClick, nameInput)(logValue)
+let getTargetValue = broadcaster => listener => {
+    broadcaster(event => {
+        listener(event.target.value)
+    })
+}
+
+withValueFromSecond(buttonClick, getTargetValue(textInput))(value => {
+    localStorage.setItem("output", value)
+})
+
+storageUpdated(event => {
+    //only show up on a separate tab
+    output.innerText = event.newValue
+})

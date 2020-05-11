@@ -39,3 +39,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
 
+
+### Storage 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/storage) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/storage/?module=/src/index.js) 
+
