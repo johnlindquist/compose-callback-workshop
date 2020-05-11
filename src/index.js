@@ -1,40 +1,42 @@
 let log = value => {
-  console.log(value)
+    console.log(value)
+}
+let keyDown = listener => {
+    document.addEventListener("keydown", listener)
 }
 
-let plus = document.getElementById("plus")
-let minus = document.getElementById("minus")
-
-let plusClick = listener => {
-  plus.addEventListener("click", listener)
-}
-
-let minusClick = listener => {
-  minus.addEventListener("click", listener)
-}
-
-let mapTo = value => broadcaster => listener => {
-  broadcaster(ignoreMe => {
-    listener(value)
-  })
-}
-
-let both = (first, second) => listener => {
-  first(listener)
-  second(listener)
-}
-
-let scan = (accumulator, initial) => {
-  let current = initial
-  return broadcaster => listener => {
+let window = count => broadcaster => listener => {
+    let values = []
     broadcaster(value => {
-      current = accumulator(current, value)
-      listener(current)
+        values.push(value)
+        if (values.length > count)
+            values.shift()
+        listener(values)
     })
-  }
 }
 
-let plusOne = mapTo(value => value + 1)(plusClick)
-let minusOne = mapTo(value => value - 1)(minusClick)
+let join = broadcaster => listener => {
+    broadcaster(array => listener(array.join("")))
+}
 
-scan((acc, value) => value(acc), 0)(both(plusOne, minusOne))(log)
+let getKey = broadcaster => listener =>
+    broadcaster(value => listener(value.key))
+
+let konamiCodeFilter = broadcaster => listener => {
+    broadcaster(value =>
+        value == "ArrowUpArrowDownArrowLeftArrowRight"
+            ? listener("konami!")
+            : listener(value)
+    )
+}
+
+let compose = (...fns) => fns.reduce((prev, next) => (...args) => prev(next(...args)))
+
+let checkKonami = compose(
+    konamiCodeFilter,
+    join,
+    window(4),
+    getKey
+)
+
+checkKonami(keyDown)(log)

@@ -102,3 +102,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js) 
 
+
+### Exercise Konami 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-konami) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-konami/?module=/src/index.js) 
+
