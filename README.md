@@ -1,5 +1,21 @@
 # Composing Callbacks Workshop
 
+## Purpose
+Write small, composable functions to improve code readability
+and reusability in complex asynchronous scenarios.
+
+## Goals
+1. Indentify Broadcasters and Listeners
+2. Decouple Broadcasters and Listeners to insert Operators
+3. Understand how Operators relay values from Broadcasters to Listeners
+4. Write your own Operators
+5. Compose Operators as complexity grows
+6. Stop Broadcasters when you're done with their values
+
+
+## Visual Metaphors
+[Visual Metaphor Slides](https://docs.google.com/presentation/d/1-ShMBAImLCv1Pkr7DJ7OPCUPlv9ZMnnEayl8NGrlg5Q/edit?usp=sharing)
+
 ## 1st Hour - Decoupling Broadcasters and Listeners 📻
 
 ### Coupled Broadcasters and Listeners 
