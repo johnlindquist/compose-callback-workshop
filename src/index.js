@@ -1,23 +1,46 @@
 import "./styles.css";
 
-let one = document.getElementById("one")
-let two = document.getElementById("two")
+let button = document.getElementById("button")
 
-let oneClick = listener => {
-    one.addEventListener("click", listener)
+let buttonClick = listener => {
+    button.addEventListener("click", listener)
 }
 
-let twoClick = listener => {
-    two.addEventListener("click", listener)
+let names = listener => {
+    setTimeout(() => {
+        ["John", "Sarah", "Ben"].forEach(listener)
+    }, 0)
 }
 
 let logValue = value => {
     console.log(value)
 }
 
-let both = (broadcaster1, broadcaster2) => listener => {
-    broadcaster1(listener)
-    broadcaster2(listener)
+let pair = (broadcaster1, broadcaster2) => listener => {
+    let broadcaster1Values = []
+    let broadcaster2Values = []
+
+    broadcaster1(value => {
+        broadcaster1Values.push(value)
+
+        if (broadcaster2Values.length) {
+            listener([
+                broadcaster1Values.shift(),
+                broadcaster2Values.shift()
+            ])
+        }
+    })
+
+    broadcaster2(value => {
+        broadcaster2Values.push(value)
+
+        if (broadcaster1Values.length) {
+            listener([
+                broadcaster1Values.shift(),
+                broadcaster2Values.shift()
+            ])
+        }
+    })
 }
 
-both(oneClick, twoClick)(logValue)
+pair(buttonClick, names)(logValue)

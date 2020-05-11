@@ -39,3 +39,10 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/two-broadcasters/?module=/src/index.js) 
 
+
+### Pair 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/pair) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/pair/?module=/src/index.js) 
+
