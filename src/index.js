@@ -54,9 +54,13 @@ let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
 }
 
 let getTargetValue = broadcaster => listener => {
-    broadcaster(event => {
-        listener(event.target.value)
-    })
+    //input text field addEventListener
+    broadcaster(
+        //input events
+        event => {
+            //passing the event.target.value to the `log` function
+            listener(event.target.value)
+        })
 }
 
 
