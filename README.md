@@ -183,6 +183,14 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js) 
 
+### 🏋️‍♀️ Exercise - Build an Easter Egg
+>> Check to see if the user has entered a specific sequence of keystrokes
+>> e.g., Up, Down, Left, Right
+>> 
+>> Note: Instead of "starting over" if a user makes a misake,
+>> you'll want to .push the new value and .shift the oldest value on the array 
+>> that keeps track of the values
+>> so you're always checking against the past 4 values
 
 ## 4th Hour - Building Real Demos 🖥
 
