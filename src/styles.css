@@ -1,3 +1,21 @@
 body {
   font-family: sans-serif;
 }
+
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: #ee0000;
+  animation: slide;
+  animation-duration: 3s;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-300%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
