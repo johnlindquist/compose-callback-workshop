@@ -46,3 +46,10 @@
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/switch-to/?module=/src/index.js) 
 
+
+### Exercise switchTo 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-switch-to) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-switch-to/?module=/src/index.js) 
+
