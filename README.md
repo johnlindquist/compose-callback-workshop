@@ -55,7 +55,7 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/hello-world/?module=/src/index.js) 
 
->> ### 🏋️‍♀️ Exercise - Build Your Own Broadcaster
+### 🏋️‍♀️ Exercise - Build Your Own Broadcaster
 >> Find a DOM Api that we haven't discussed yet
 >> and build a Broadcaster from it
 
@@ -94,7 +94,7 @@ and reusability in complex asynchronous scenarios.
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
 
 
->> ### 🏋️‍♀️ Exercise - Switch From One Broadcaster to Another
+### 🏋️‍♀️ Exercise - Switch From One Broadcaster to Another
 >> Write an Operator that takes 2 Broadcasters
 >> Have it switch from the first Broadcaster to the second
 >> e.g., Click a button, Load JSON, log JSON
@@ -140,6 +140,10 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/stop/?module=/src/index.js) 
 
+### 🏋️‍♀️ Exercise - Stop On Condition
+>> Write an operator that stops a broadcast
+>> based a on function that checks the current value
+>> e.g., A number greater than 4 or text longer than 3 characters
 
 ### Concat 
 
@@ -168,13 +172,6 @@ and reusability in complex asynchronous scenarios.
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/scan) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/scan/?module=/src/index.js) 
-
-
-### Interval with Inc 
-
-[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/interval-with-inc) 
-
-[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/interval-with-inc/?module=/src/index.js) 
 
 
 ## 4th Hour - Building Real Demos 🖥
@@ -227,8 +224,15 @@ and reusability in complex asynchronous scenarios.
 
 ## Other Examples
 
+### Interval with Inc 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/interval-with-inc) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/interval-with-inc/?module=/src/index.js) 
+
 ### Count To 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/count-to) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/count-to/?module=/src/index.js) 
+
