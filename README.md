@@ -267,3 +267,11 @@ open their settings and enable "Hard Reload on Change".
 
 This disables the "hot module reloading" which tries to
 keep state between reloads.
+
+## Create Your Own Server
+
+This codesandbox will create your own instance of a Star Wars API:
+
+[https://codesandbox.io/s/github/johnlindquist/swapi-json-server](https://codesandbox.io/s/github/johnlindquist/swapi-json-server)
+
+It takes a second to spin up, but if it's taking too long, refresh and it should be fine.
