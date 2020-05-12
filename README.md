@@ -27,6 +27,8 @@ and reusability in complex asynchronous scenarios.
 
 ### Broadcasters 
 
+_[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)_
+
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/broadcasters) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/broadcasters/?module=/src/index.js) 
