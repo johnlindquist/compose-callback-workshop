@@ -114,12 +114,17 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/two-destinations/?module=/src/index.js) 
 
-
 ### Share 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/share) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js) 
+
+### Delay 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/delay) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/delay/?module=/src/index.js) 
 
 ### 🏋️‍♀️ Exercise - Debounce Fast Values
 >> Write an operator that only allows values through
