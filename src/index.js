@@ -29,13 +29,6 @@ let promise = async listener => {
     listener(result)
 }
 
-let getURL = url => async listener => {
-    let response = await fetch(url);
-    let data = await response.json();
-
-    listener(data);
-};
-
 let someValue = listener => {
     setTimeout(() => {
         listener({ name: "John" })
@@ -63,4 +56,9 @@ let someGenerator = listener => {
     }
 }
 
-someGenerator(value => console.log(value))
+let someURL = async listener => {
+    let response = await fetch("https://api.github.com/users/johnlindquist");
+    let data = await response.json();
+
+    listener(data);
+};
