@@ -16,7 +16,7 @@ and reusability in complex asynchronous scenarios.
 ## Visual Metaphors
 [Visual Metaphor Slides](https://docs.google.com/presentation/d/1-ShMBAImLCv1Pkr7DJ7OPCUPlv9ZMnnEayl8NGrlg5Q/edit?usp=sharing)
 
-## 1st Hour - Decoupling Broadcasters and Listeners 📻
+## 1st Hour - Decoupling Broadcasters and Listeners 🗣 → 👂
 
 ### Coupled Broadcasters and Listeners 
 
