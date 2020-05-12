@@ -1,65 +1,24 @@
 import "./styles.css";
 
-let button = document.getElementById("button")
-let name = document.getElementById("name")
-let form = document.getElementById("form")
-form.addEventListener("submit", event => {
-  event.preventDefault()
-})
-
-
-let buttonClick = destination => {
-  console.log("setup")
-  button.addEventListener("click", destination)
+let writeHTML = value => {
+    document.getElementById("output").innerHTML = `<h2>${value}</h2>`
 }
 
-let nameInput = destination => {
-  name.addEventListener("input", destination)
+let ofString = value => listener => {
+    setTimeout(() => {
+        listener(value)
+    }, 0)
 }
 
-let logValue = value => {
-  console.log(value)
-}
-
-let withValueFromSecond = (first, second) => destination => {
-  let secondValue = null
-  second(value => {
-    secondValue = value
-  })
-
-  first(ignore => {
-    destination(secondValue)
-  })
-}
-
-let getTargetValue = source => destination => {
-  source(value => {
-    destination(value.target.value)
-  })
-}
-
-
-let clearInput = () => {
-  name.value = ""
-}
-
-let share = () => {
-  let destinations = []
-
-  return source => destination => {
-    destinations.push(destination)
-    if (destinations.length > 1) return
-    source(value => {
-      destinations.forEach(fn => fn(value))
+let delay = time => broadcaster => listener => {
+    broadcaster(value => {
+        setTimeout(() => {
+            listener(value)
+        }, time)
     })
-  }
 }
 
-let sharedNameInput = share()(nameInput)
-let nameInputTargetValue = getTargetValue(sharedNameInput)
+let delay3Seconds = delay(3000)
+let hello = ofString("Hello!")
 
-let sharedButton = share()(buttonClick)
-
-let getNameAfterButtonClick = withValueFromSecond(sharedButton, nameInputTargetValue)
-getNameAfterButtonClick(logValue)
-getNameAfterButtonClick(clearInput)
+delay3Seconds(hello)(writeHTML)

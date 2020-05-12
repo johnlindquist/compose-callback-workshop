@@ -60,3 +60,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js) 
 
+
+### Delay 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/delay) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/delay/?module=/src/index.js) 
+
