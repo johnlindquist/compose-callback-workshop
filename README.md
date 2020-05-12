@@ -18,9 +18,6 @@ and reusability in complex asynchronous scenarios.
 
 ## 1st Hour - Decoupling Broadcasters and Listeners 📻
 
->> _Note_: If you experience reloading issues on Codesandbox,
->> open their settings and enable "Hard Reload on Change"
-
 ### Coupled Broadcasters and Listeners 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners) 
@@ -208,7 +205,7 @@ and reusability in complex asynchronous scenarios.
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/pause-interval/?module=/src/index.js) 
 
 
-### Typeahead First Pass 
+### Typeahead
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/typeahead-first-pass) 
 
@@ -254,3 +251,19 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/count-to/?module=/src/index.js) 
 
+## 🤦‍♂️ Troubleshooting
+
+### Async/Await
+If you get a "regenerator runtime" error, make sure to add the following to your `package.json`:
+```json
+"browserslist": [
+    "last 1 Chrome versions"
+]
+```
+
+### Weird Reloading Issues
+If you experience reloading issues on Codesandbox,
+open their settings and enable "Hard Reload on Change".
+
+This disables the "hot module reloading" which tries to
+keep state between reloads.
