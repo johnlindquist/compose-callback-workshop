@@ -4,55 +4,55 @@ let button = document.getElementById("button")
 let name = document.getElementById("name")
 let form = document.getElementById("form")
 form.addEventListener("submit", event => {
-  event.preventDefault()
+    event.preventDefault()
 })
 
 
-let buttonClick = destination => {
-  console.log("setup")
-  button.addEventListener("click", destination)
+let buttonClick = listener => {
+    console.log("setup")
+    button.addEventListener("click", listener)
 }
 
-let nameInput = destination => {
-  name.addEventListener("input", destination)
+let nameInput = listener => {
+    name.addEventListener("input", listener)
 }
 
 let logValue = value => {
-  console.log(value)
+    console.log(value)
 }
 
-let withValueFromSecond = (first, second) => destination => {
-  let secondValue = null
-  second(value => {
-    secondValue = value
-  })
+let withValueFromSecond = (first, second) => listener => {
+    let secondValue = null
+    second(value => {
+        secondValue = value
+    })
 
-  first(ignore => {
-    destination(secondValue)
-  })
+    first(ignore => {
+        listener(secondValue)
+    })
 }
 
-let getTargetValue = source => destination => {
-  source(value => {
-    destination(value.target.value)
-  })
+let getTargetValue = broadcaster => listener => {
+    broadcaster(value => {
+        listener(value.target.value)
+    })
 }
 
 
 let clearInput = () => {
-  name.value = ""
+    name.value = ""
 }
 
 let share = () => {
-  let destinations = []
+    let listeners = []
 
-  return source => destination => {
-    destinations.push(destination)
-    if (destinations.length > 1) return
-    source(value => {
-      destinations.forEach(fn => fn(value))
-    })
-  }
+    return broadcaster => listener => {
+        listeners.push(listener)
+        if (listeners.length > 1) return
+        broadcaster(value => {
+            listeners.forEach(listener => listener(value))
+        })
+    }
 }
 
 let sharedNameInput = share()(nameInput)
