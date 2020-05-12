@@ -1,8 +1,14 @@
 import "./styles.css";
 
-let box = document.getElementById("box")
+let button = document.getElementById("button")
 
-let boxAnimated = listener => {
+let buttonClick = listener => {
+    button.addEventListener("click", listener)
+}
+
+let boxAnimate = id => listener => {
+    let box = document.getElementById(id)
+    box.classList.add("slide")
     box.addEventListener("animationend", listener)
 }
 
@@ -10,4 +16,14 @@ let logValue = value => {
     console.log(value)
 }
 
-boxAnimated(logValue)
+let switchTo = toBroadcaster => broadcaster => listener => {
+    broadcaster(value => {
+        toBroadcaster(listener)
+    })
+}
+
+switchTo(boxAnimate("blue"))
+    (switchTo(boxAnimate("green"))
+        (switchTo(boxAnimate("red"))
+            (buttonClick)
+        ))(logValue)

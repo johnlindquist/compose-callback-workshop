@@ -2,20 +2,30 @@ body {
   font-family: sans-serif;
 }
 
-#box {
+.box {
   width: 100px;
   height: 100px;
+}
+
+#red {
   background-color: #ee0000;
-  animation: slide;
-  animation-duration: 3s;
+}
+
+#green {
+  background-color: #00ee00;
+}
+
+#blue {
+  background-color: #0000ee;
+}
+
+.slide {
+  animation: slide 2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slide {
-  from {
-    transform: translateX(-300%);
-  }
-
   to {
-    transform: translateX(0);
+    transform: translateX(300%);
   }
 }
