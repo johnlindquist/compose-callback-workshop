@@ -8,8 +8,10 @@ let oneSecond = listener => {
     }, 1000)
 }
 
-let logValue = value => {
-    console.log(value)
+let output = document.getElementById("output")
+let writeHTML = value => {
+    if (value === done) return
+    output.innerHTML = `<h2>${value}</h2>`
 }
 
 let concat = (...broadcasters) => listener => {
@@ -42,4 +44,4 @@ let set = mapTo("set")(oneSecond)
 let go = mapTo("go!")(oneSecond)
 
 
-concat(ready, set, go)(logValue)
+concat(ready, set, go)(writeHTML)
