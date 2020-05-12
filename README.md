@@ -121,6 +121,11 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/share/?module=/src/index.js) 
 
+### 🏋️‍♀️ Exercise - Debounce Fast Values
+>> Write an operator that only allows values through
+>> after 250ms of inaction
+>> e.g., When the user is typing, don't send every keystroke,
+>> but wait for them to pause until you send the value
 
 ### Compose 
 
