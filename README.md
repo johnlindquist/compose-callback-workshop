@@ -73,13 +73,6 @@ _[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)_
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/two-broadcasters/?module=/src/index.js) 
 
 
-### Get Target Value 
-
-[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/get-target-value) 
-
-[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js) 
-
-
 ### Together 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/together) 
@@ -92,6 +85,13 @@ _[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)_
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/with-value-from-second) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
+
+
+### Get Target Value 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/get-target-value) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/get-target-value/?module=/src/index.js) 
 
 
 ### 🏋️‍♀️ Exercise - Switch From One Broadcaster to Another
