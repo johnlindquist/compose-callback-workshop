@@ -192,6 +192,12 @@ and reusability in complex asynchronous scenarios.
 
 ## Exercises
 
+### Exercise Animation 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-animation) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-animation/?module=/src/index.js) 
+
 ### Konami Code
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-konami) 
