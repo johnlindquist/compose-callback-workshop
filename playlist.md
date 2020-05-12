@@ -39,3 +39,10 @@
 
 [https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js](https://codesandbox.io/embed/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
 
+
+### Switch To 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/switch-to) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/switch-to/?module=/src/index.js) 
+

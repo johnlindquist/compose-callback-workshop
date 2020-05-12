@@ -1,29 +1,28 @@
 import "./styles.css";
 
-let button = document.getElementById("button")
-let name = document.getElementById("name")
+let log = value => {
+    console.log(value);
+};
+
+let button = document.getElementById("button");
 
 let buttonClick = listener => {
-    button.addEventListener("click", listener)
-}
+    button.addEventListener("click", listener);
+};
 
-let nameInput = listener => {
-    name.addEventListener("input", listener)
-}
+let getURL = url => async listener => {
+    let response = await fetch(url);
+    let data = await response.json();
 
-let logValue = value => {
-    console.log(value)
-}
+    listener(data);
+};
 
-let withValueFromSecond = (firstBroadcaster, secondBroadcaster) => listener => {
-    let secondValue = null
-    secondBroadcaster(value => {
-        secondValue = value
-    })
+let switchTo = otherBroadcaster => broadcaster => listener => {
+    broadcaster(value => {
+        otherBroadcaster(listener);
+    });
+};
 
-    firstBroadcaster(ignore => {
-        listener(secondValue)
-    })
-}
+let getJohn = getURL("https://api.github.com/users/johnlindquist");
 
-withValueFromSecond(buttonClick, nameInput)(logValue)
+switchTo(getJohn)(buttonClick)(log);
