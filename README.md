@@ -18,6 +18,9 @@ and reusability in complex asynchronous scenarios.
 
 ## 1st Hour - Decoupling Broadcasters and Listeners 📻
 
+>> _Note_: If you experience reloading issues on Codesandbox,
+>> open their settings and enable "Hard Reload on Change"
+
 ### Coupled Broadcasters and Listeners 
 
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/coupled-broadcasters-and-listeners) 
@@ -52,6 +55,9 @@ and reusability in complex asynchronous scenarios.
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/hello-world/?module=/src/index.js) 
 
+>> ### 🏋️‍♀️ Exercise - Build Your Own Broadcaster
+>> Find a DOM Api that we haven't discussed yet
+>> and build a Broadcaster from it
 
 ### Twice 
 
@@ -88,7 +94,10 @@ and reusability in complex asynchronous scenarios.
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/with-value-from-second/?module=/src/index.js) 
 
 
-
+>> ### 🏋️‍♀️ Exercise - Switch From One Broadcaster to Another
+>> Write an Operator that takes 2 Broadcasters
+>> Have it switch from the first Broadcaster to the second
+>> e.g., Click a button, Load JSON, log JSON
 
 ## 2nd Hour - Enhancing Broadcasters 👨‍🍳
 
@@ -197,6 +206,12 @@ and reusability in complex asynchronous scenarios.
 [Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-animation) 
 
 [Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-animation/?module=/src/index.js) 
+
+### Exercise switchTo 
+
+[Go to branch](https://github.com/johnlindquist/compose-callback-workshop/tree/exercise-switch-to) 
+
+[Edit on Codesandbox](https://codesandbox.io/s/github/johnlindquist/compose-callback-workshop/tree/exercise-switch-to/?module=/src/index.js) 
 
 ### Exercise Animate a Sequence of Boxes 
 
