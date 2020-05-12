@@ -57,6 +57,7 @@ _[MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events)_
 ### 🏋️‍♀️ Exercise - Build Your Own Broadcaster
 >> Find a DOM Api that we haven't discussed yet
 >> and build a Broadcaster from it
+>> e.g., Scroll, resize, paste, etc
 
 ### Twice 
 
